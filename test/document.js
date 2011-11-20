@@ -1,5 +1,6 @@
+var XMLWriter = require('../');
 exports['setUp'] = function (callback) {
-	this.xw = require('../')();
+	this.xw = new XMLWriter;
 	callback();
 };
 exports['t01'] = function (test) {
