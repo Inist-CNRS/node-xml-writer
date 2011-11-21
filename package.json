@@ -1,0 +1,30 @@
+{
+    "name": "xml-writer",
+        "version": "1.0.0",
+        "description": "Native and Full Javsacript implementation of the classic XMLWriter class",
+        "homepage": "http://github.com/touv/node-xml-writer",
+        "main": "./index.js",
+        "scripts": {
+            "test": "nodeunit test"
+        },
+        "devDependencies": {
+            "nodeunit": ">=0.6.2"
+        },
+        "scripts" : {
+            "test" : "nodeunit"
+        },
+        "repository" : {
+            "type" : "git",
+            "url" : "http://github.com/touv/node-xml-writer.git"
+        },
+        "keywords" : [ "xml", "writer", "XMLWriter", "generator" ],
+        "author" : {
+            "name" : "Nicolas Thouvenin",
+            "email" : "nthouvenin@gmail.com",
+            "url" : "http://blog.touv.fr"
+        },
+        "license" : "MIT/X11",
+        "engine" : {
+            "node" : ">=0.4"
+        }
+}
