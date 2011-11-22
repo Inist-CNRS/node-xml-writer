@@ -35,5 +35,7 @@ exports['t04'] = function (test) {
     test.done();
 };
 exports['t05'] = function (test) {
-    test.done();
+	this.xw.writePI('php', ' var_dump(__FILE__); ');
+	test.equal(this.xw.toString(), '<?php var_dump(__FILE__); ?>');
+	test.done();
 };

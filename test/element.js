@@ -27,3 +27,8 @@ exports['t04'] = function (test) {
 	test.equal(this.xw.toString(), '<foo>fake</foo>');
     test.done();
 };
+exports['t05'] = function (test) {
+	this.xw.writeElement('tag', 'value').endElement();
+	test.equal(this.xw.toString(), '<tag>value</tag>');
+    test.done();
+};

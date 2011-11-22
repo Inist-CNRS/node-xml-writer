@@ -50,3 +50,8 @@ exports['t04'] = function (test) {
 exports['t05'] = function (test) {
     test.done();
 };
+exports['t06'] = function (test) {
+	this.xw.writeComment('value');
+	test.equal(this.xw.toString(), '<!--value-->');
+    test.done();
+};
