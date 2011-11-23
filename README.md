@@ -19,6 +19,7 @@ With [npm](http://npmjs.org) do:
 	xw = new XMLWriter;
 	xw.startDocument();
 	xw.startElement('root');
+	xw.writeAttribute('foo', 'value');
 	xw.text('Some content');
 	xw.endDocument();
 
@@ -26,8 +27,57 @@ With [npm](http://npmjs.org) do:
 
 Output:
 
+    <?xml version="1.0"?>
+	<root foo="value">Some content</root>
+
+## Chaining
+
+	var XMLWriter = require('xml-writer');
+	xw = new XMLWriter;
+	xw.startDocument().startElement('root').writeAttribute('foo', 'value').writeElement('tag', 'Some content');
+
+	console.log(xw.toString());
+
+Output:
 
     <?xml version="1.0"?>
+	<root foo="value"><tag>Some content</tag></root>
+
+## Tolerant
+
+	var XMLWriter = require('xml-writer');
+	xw = new XMLWriter;
+	xw.startElement('root').writeAttribute('foo', 'value').text('Some content');
+
+	console.log(xw.toString());
+
+Output:
+
+	<root foo="value">Some content</root>
+
+
+## Extensible
+
+	var XMLWriter = require('xml-writer'),
+               fs = require('fs');
+	var ws = fs.createWriteStream('/tmp/foo.xml');
+	ws.on('close', function() {
+			console.log(fs.readFileSync('/tmp/foo.xml', 'UTF-8'));
+	});
+	xw = new XMLWriter(false, function(string, encoding) { 
+			ws.write(string, encoding);
+	});
+	xw.startDocument('1.0', 'UTF-8').startElement(function() {
+		return 'root';
+	}).text(function() {
+		return 'Some content';
+	});
+	ws.end();
+
+
+Output:
+
+	<?xml version="1.0" encoding="UTF-8"?>
 	<root>Some content</root>
 
 	
@@ -42,7 +92,10 @@ Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
 
 ## Generic
 
-### text
+### constructor XMLWriter(Boolean indent, Function writer(string, encoding))
+Create an new writer
+
+### text(String content)
 Write text
 
 ### writeRaw 
@@ -52,12 +105,12 @@ Write a raw XML text
 ### startDocument(String version = '1.0', String encoding = NULL, Boolean standalone = false) 
 Create document tag
 
-### endDocument
+### endDocument()
 End current document
 
 ## Element
 
-### writeElement
+### writeElement(String name, String content)
 Write full element tag
 
 ### writeElementNS
@@ -66,15 +119,15 @@ Write full namespaced element tag
 ### startElementNS
 Create start namespaced element tag
 
-### startElement
+### startElement(String name)
 Create start element tag
 
-### endElement
+### endElement()
 End current element
 
 ## Attributes
 
-### writeAttribute
+### writeAttribute(String name, String value)
 Write full attribute
 
 ### writeAttributeNS
@@ -83,42 +136,43 @@ Write full namespaced attribute
 ### startAttributeNS
 Create start namespaced attribute
 
-### startAttribute
+### startAttribute(String name)
 Create start attribute
 
-### endAttribute
+### endAttribute()
 End attribute
 
 ## Processing Instruction
 
-### writePI
+### writePI(String name, String content)
 Writes a PI
 
-### startPI
+### startPI(String name)
 Create start PI tag
 
-### endPI
+### endPI()
 End current PI
 
 ## CData
 
-### writeCData
+### writeCData(String name, String content)
 Write full CDATA tag
 
-### startCData
+### startCData(String name)
 Create start CDATA tag
 
-### endCData
+### endCData()
 End current CDATA
 
 ## Comment
-### writeComment 
+
+### writeComment(String content)
 Write full comment tag
 
-### startComment 
+### startComment()
 Create start comment
 
-### endComment 
+### endComment()
 Create end comment
 
 # Also
