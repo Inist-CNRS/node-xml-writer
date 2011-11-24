@@ -1,6 +1,6 @@
 # XMLWriter for NodeJS
 
-It\'s native and full javascript implementation of the classic XMLWriter class.
+It's native and full javascript implementation of the classic XMLWriter class.
 The API is complete, flexible and tolerant.
 XML is still valid.
 
