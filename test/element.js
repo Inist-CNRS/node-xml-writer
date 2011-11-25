@@ -32,3 +32,13 @@ exports['t05'] = function (test) {
 	test.equal(this.xw.toString(), '<tag>value</tag>');
     test.done();
 };
+exports['t06'] = function (test) {
+	this.xw.startElement('a');
+	this.xw.startElement('b');
+	this.xw.endElement();
+	this.xw.startElement('c');
+	this.xw.endElement();
+	this.xw.endElement();
+	test.equal(this.xw.toString(), '<a><b/><c/></a>');
+    test.done();
+};
