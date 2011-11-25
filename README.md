@@ -178,6 +178,7 @@ Create end comment
 # Also
 
 * https://github.com/minchenkov/simple-xml-writer
+* https://github.com/wezm/node-genx
 
 # License
 
