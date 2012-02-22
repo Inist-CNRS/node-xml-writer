@@ -14,7 +14,7 @@ With [npm](http://npmjs.org) do:
 # Examples
 
 ## Basic
-
+```javascript
 	var XMLWriter = require('xml-writer');
 	xw = new XMLWriter;
 	xw.startDocument();
@@ -24,40 +24,40 @@ With [npm](http://npmjs.org) do:
 	xw.endDocument();
 
 	console.log(xw.toString());
-
+```
 Output:
-
+```xml
     <?xml version="1.0"?>
 	<root foo="value">Some content</root>
-
+```
 ## Chaining
-
+```javascript
 	var XMLWriter = require('xml-writer');
 	xw = new XMLWriter;
 	xw.startDocument().startElement('root').writeAttribute('foo', 'value').writeElement('tag', 'Some content');
 
 	console.log(xw.toString());
-
+```
 Output:
-
+```xml
     <?xml version="1.0"?>
 	<root foo="value"><tag>Some content</tag></root>
-
+```
 ## Tolerant
-
+```javascript
 	var XMLWriter = require('xml-writer');
 	xw = new XMLWriter;
 	xw.startElement('root').writeAttribute('foo', 'value').text('Some content');
 
 	console.log(xw.toString());
-
+```
 Output:
-
+```xml
 	<root foo="value">Some content</root>
-
+```
 
 ## Extensible
-
+```javascript
 	var XMLWriter = require('xml-writer'),
                fs = require('fs');
 	var ws = fs.createWriteStream('/tmp/foo.xml');
@@ -73,13 +73,13 @@ Output:
 		return 'Some content';
 	});
 	ws.end();
-
+```
 
 Output:
-
+```xml
 	<?xml version="1.0" encoding="UTF-8"?>
 	<root>Some content</root>
-
+```
 	
 # Tests
 
