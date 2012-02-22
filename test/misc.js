@@ -22,5 +22,11 @@ exports['t03'] = function (test) {
 	test.equal(this.xw.toString(), '<foo toto="&quot;"/>');
     test.done();
 };
+exports['t03'] = function (test) {
+	this.xw.startElement('foo').writeAttribute('toto','&');
+	test.equal(this.xw.toString(), '<foo toto="&amp;"/>');
+    test.done();
+};
+
 
 
