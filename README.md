@@ -39,10 +39,10 @@ Output:
 	console.log(xw.toString());
 ```
 Output:
-```xml
-<?xml version="1.0"?>
-<root foo="value"><tag>Some content</tag></root>
-```
+	
+	<?xml version="1.0"?>
+	<root foo="value"><tag>Some content</tag></root>
+	
 ## Tolerant
 ```javascript
 	var XMLWriter = require('xml-writer');
@@ -52,9 +52,9 @@ Output:
 	console.log(xw.toString());
 ```
 Output:
-```xml
-<root foo="value">Some content</root>
-```
+	
+	<root foo="value">Some content</root>
+	
 
 ## Extensible
 ```javascript
@@ -76,10 +76,10 @@ Output:
 ```
 
 Output:
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<root>Some content</root>
-```
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<root>Some content</root>
+	
 	
 # Tests
 
