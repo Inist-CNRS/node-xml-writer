@@ -1,6 +1,6 @@
 {
     "name": "xml-writer",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "description": "Native and full Javascript implementation of the classic XMLWriter class",
         "homepage": "http://github.com/touv/node-xml-writer",
         "main": "./index.js",
