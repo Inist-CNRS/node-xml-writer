@@ -26,9 +26,9 @@ With [npm](http://npmjs.org) do:
 	console.log(xw.toString());
 ```
 Output:
-```xml
-    <?xml version="1.0"?>
-	<root foo="value">Some content</root>
+```XML
+<?xml version="1.0"?>
+<root foo="value">Some content</root>
 ```
 ## Chaining
 ```javascript
