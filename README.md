@@ -26,7 +26,7 @@ With [npm](http://npmjs.org) do:
 	console.log(xw.toString());
 ```
 Output:
-```XML
+```
 <?xml version="1.0"?>
 <root foo="value">Some content</root>
 ```
@@ -40,8 +40,8 @@ Output:
 ```
 Output:
 ```xml
-    <?xml version="1.0"?>
-	<root foo="value"><tag>Some content</tag></root>
+<?xml version="1.0"?>
+<root foo="value"><tag>Some content</tag></root>
 ```
 ## Tolerant
 ```javascript
@@ -53,7 +53,7 @@ Output:
 ```
 Output:
 ```xml
-	<root foo="value">Some content</root>
+<root foo="value">Some content</root>
 ```
 
 ## Extensible
@@ -77,8 +77,8 @@ Output:
 
 Output:
 ```xml
-	<?xml version="1.0" encoding="UTF-8"?>
-	<root>Some content</root>
+<?xml version="1.0" encoding="UTF-8"?>
+<root>Some content</root>
 ```
 	
 # Tests
