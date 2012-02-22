@@ -26,10 +26,10 @@ With [npm](http://npmjs.org) do:
 	console.log(xw.toString());
 ```
 Output:
-```
-<?xml version="1.0"?>
-<root foo="value">Some content</root>
-```
+	
+	<?xml version="1.0"?>
+	<root foo="value">Some content</root>
+	
 ## Chaining
 ```javascript
 	var XMLWriter = require('xml-writer');
