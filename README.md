@@ -1,5 +1,7 @@
 # XMLWriter for NodeJS
 
+[![Build Status](https://secure.travis-ci.org/touv/node-xml-writer.png?branch=master)](http://travis-ci.org/touv/node-xml-writer)
+
 It's native and full javascript implementation of the classic XMLWriter class.
 The API is complete, flexible and tolerant.
 XML is still valid.
