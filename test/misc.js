@@ -17,16 +17,34 @@ exports['t03'] = function (test) {
 	test.equal(this.xw.toString(), '<foo>&lt;toto&gt;</foo>');
     test.done();
 };
-exports['t03'] = function (test) {
+exports['t04'] = function (test) {
 	this.xw.startElement('foo').writeAttribute('toto','"');
 	test.equal(this.xw.toString(), '<foo toto="&quot;"/>');
     test.done();
 };
-exports['t03'] = function (test) {
+exports['t05'] = function (test) {
 	this.xw.startElement('foo').writeAttribute('toto','&');
 	test.equal(this.xw.toString(), '<foo toto="&amp;"/>');
     test.done();
 };
+exports['t06'] = function (test) {
+	this.xw.startElement('foo').writeAttribute('toto','&');
+	test.equal(this.xw.toString(), '<foo toto="&amp;"/>');
+    test.done();
+};
+exports['t07'] = function (test) {
+	this.xw.startElement('foo').writeAttribute('toto','"&');
+	test.equal(this.xw.toString(), '<foo toto="&quot;&amp;"/>');
+    test.done();
+};
+exports['t08'] = function (test) {
+	this.xw.startElement('foo').text('<to&to>');
+	test.equal(this.xw.toString(), '<foo>&lt;to&amp;to&gt;</foo>');
+    test.done();
+};
+
+
+
 
 
 
