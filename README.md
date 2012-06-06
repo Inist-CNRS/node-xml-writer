@@ -6,6 +6,11 @@ It's native and full javascript implementation of the classic XMLWriter class.
 The API is complete, flexible and tolerant.
 XML is still valid.
 
+## Contributors
+
+  * [Nicolas Thouvenin](https://github.com/touv) 
+  * [Anton Zem](https://github.com/AlgoTrader)
+
 # Installation
 
 With [npm](http://npmjs.org) do:
