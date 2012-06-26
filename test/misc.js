@@ -15,8 +15,14 @@ exports['t02'] = function (test) {
 exports['t03'] = function (test) {
 	this.xw.startElement('foo').text('<toto>');
 	test.equal(this.xw.toString(), '<foo>&lt;toto&gt;</foo>');
-    test.done();
+  test.done();
 };
+  exports['t03b'] = function (test) {
+	this.xw.startElement('foo').text('un & deux & troie');
+	test.equal(this.xw.toString(), '<foo>un &amp; deux &amp; troie</foo>');
+  test.done();
+};
+
 exports['t04'] = function (test) {
 	this.xw.startElement('foo').writeAttribute('toto','"');
 	test.equal(this.xw.toString(), '<foo toto="&quot;"/>');
