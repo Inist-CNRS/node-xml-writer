@@ -8,7 +8,7 @@
     } 
   ],
   "description": "Native and full Javascript implementation of the classic XMLWriter class",
-  "tags": [
+  "keywords": [
     "xml",
     "writer",
     "XMLWriter",
