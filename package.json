@@ -1,6 +1,6 @@
 {
   "name": "xml-writer",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
   "contributors": [
     {
@@ -14,14 +14,14 @@
     "XMLWriter",
     "generator"
   ],
-  "homepage": "http://github.com/lindory-project/node-xml-writer",
+  "homepage": "http://github.com/touv/node-xml-writer",
   "scripts": {
     "test": "nodeunit test/"
   },
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lindory-project/node-xml-writer.git"
+    "url": "https://github.com/touv/node-xml-writer.git"
   },
   "dependencies": {
   },
