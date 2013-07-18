@@ -10,6 +10,7 @@ XML is still valid.
 
   * [Nicolas Thouvenin](https://github.com/touv) 
   * [Anton Zem](https://github.com/AlgoTrader)
+  * [chiplee](https://github.com/chiplee)
 
 # Installation
 
@@ -159,6 +160,17 @@ Create start PI tag
 
 ### endPI()
 End current PI
+
+## DocType
+
+### writeDocType(String name, String pubid, String sysid, String subset) 
+Write a DocType 
+
+### startDocType(String name, String pubid, String sysid, String subset)
+Create start DocType tag
+
+### endDocType()
+End current DocType 
 
 ## CData
 
