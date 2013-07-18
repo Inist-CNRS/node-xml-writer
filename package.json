@@ -5,7 +5,11 @@
   "contributors": [
     {
       "name": "Anton Zem"
-    } 
+    },
+    {
+      "name": "chiplee",
+      "url": "https://github.com/chiplee"
+    }
   ],
   "description": "Native and full Javascript implementation of the classic XMLWriter class",
   "keywords": [
