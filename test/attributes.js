@@ -51,3 +51,8 @@ exports['t06'] = function (test) {
 	test.equal(this.xw.toString(), '<tag key="value"/>');
     test.done();
 };
+exports['t06'] = function (test) {
+	this.xw.startElement('tag').writeAttribute('key', '"< & >"').endElement();
+	test.equal(this.xw.toString(), '<tag key="&quot;&lt; &amp; &gt;&quot;"/>');
+    test.done();
+};
