@@ -55,3 +55,8 @@ exports['t06'] = function (test) {
 	test.equal(this.xw.toString(), '<!--value-->');
     test.done();
 };
+exports['t06'] = function (test) {
+	this.xw.writeComment('<test>');
+	test.equal(this.xw.toString(), '<!--<test>-->');
+  test.done();
+};
