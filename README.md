@@ -202,3 +202,7 @@ Create end comment
 # License
 
 [MIT/X11](./LICENSE)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/touv/node-xml-writer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
