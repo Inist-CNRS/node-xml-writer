@@ -174,10 +174,10 @@ End current DocType
 
 ## CData
 
-### writeCData(String name, String content)
+### writeCData(String content)
 Write full CDATA tag
 
-### startCData(String name)
+### startCData()
 Create start CDATA tag
 
 ### endCData()
