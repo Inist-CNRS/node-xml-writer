@@ -24,7 +24,8 @@
   ],
   "homepage": "http://github.com/touv/node-xml-writer",
   "scripts": {
-    "test": "nodeunit test/"
+    "truc": "nodeunit test/",
+    "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/nodeunit test/"
   },
   "main": "./index.js",
   "repository": {
@@ -33,7 +34,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "nodeunit": ">=0.7.3"
+    "nodeunit": ">=0.7.3",
+    "istanbul": "^0.3.0"
   },
   "license": "MIT",
   "engines": {
