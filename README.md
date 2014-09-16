@@ -10,7 +10,7 @@ XML is still valid.
 
   * [Nicolas Thouvenin](https://github.com/touv) 
   * [Anton Zem](https://github.com/AlgoTrader)
-  * [Chip Lee](https://github.com/chiplee)
+  * [Chip Lee](https://github.com/chipincode)
   * [Peecky](https://github.com/peecky)
 
 # Installation
