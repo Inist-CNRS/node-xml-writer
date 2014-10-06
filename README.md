@@ -1,4 +1,5 @@
 # XMLWriter for NodeJS
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/touv/node-xml-writer?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://secure.travis-ci.org/touv/node-xml-writer.png?branch=master)](http://travis-ci.org/touv/node-xml-writer)
 
