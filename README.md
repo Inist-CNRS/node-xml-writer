@@ -39,6 +39,8 @@ Output:
 	<?xml version="1.0"?>
 	<root foo="value">Some content</root>
 	
+Tip: If you want your XML **indented** use `new XMLWriter(true)`.
+	
 ## Chaining
 ```javascript
 	var XMLWriter = require('xml-writer');
