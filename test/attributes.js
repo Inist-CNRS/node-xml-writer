@@ -46,14 +46,14 @@ exports['t05'] = function (test) {
 	test.equal(this.xw.toString(), '<tag key1=""><tag>value</tag></tag>');
     test.done();
 };
-exports['t06'] = function (test) {
+exports['t06a'] = function (test) {
 	this.xw.startElement('tag').writeAttribute('key', 'value').endElement();
 	test.equal(this.xw.toString(), '<tag key="value"/>');
     test.done();
 };
-exports['t06'] = function (test) {
+exports['t06b'] = function (test) {
 	this.xw.startElement('tag').writeAttribute('key', '"< & >"').endElement();
-	test.equal(this.xw.toString(), '<tag key="&quot;&lt; &amp; &gt;&quot;"/>');
+	test.equal(this.xw.toString(), '<tag key="&quot;&lt; &amp; >&quot;"/>');
     test.done();
 };
 exports['t07'] = function (test) {
@@ -62,5 +62,11 @@ exports['t07'] = function (test) {
   this.xw.writeAttribute('key2', null);
   this.xw.writeAttribute('key3', undefined);
   test.equal(this.xw.toString(), '<tag/>');
+  test.done();
+};
+exports['t08'] = function (test) {
+  this.xw.startElement('tag');
+  this.xw.writeAttribute('key1', '\t\n\r');
+  test.equal(this.xw.toString(), '<tag key1="&#x9;&#xA;&#xD;"/>');
   test.done();
 };
