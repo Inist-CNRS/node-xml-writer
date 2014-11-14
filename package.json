@@ -13,6 +13,10 @@
     {
       "name": "Peecky",
       "url": "https://github.com/peecky"
+    },
+    {
+      "name": "Julian Scheid",
+      "url": "https://github.com/jscheid"
     }
   ],
   "description": "Native and full Javascript implementation of the classic XMLWriter class",

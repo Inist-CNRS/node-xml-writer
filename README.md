@@ -8,10 +8,11 @@ XML is still valid.
 
 ## Contributors
 
-  * [Nicolas Thouvenin](https://github.com/touv) 
+  * [Nicolas Thouvenin](https://github.com/touv)
   * [Anton Zem](https://github.com/AlgoTrader)
   * [Chip Lee](https://github.com/chipincode)
   * [Peecky](https://github.com/peecky)
+  * [Julian Scheid](https://github.com/jscheid)
 
 # Installation
 
@@ -35,12 +36,12 @@ With [npm](http://npmjs.org) do:
 	console.log(xw.toString());
 ```
 Output:
-	
+
 	<?xml version="1.0"?>
 	<root foo="value">Some content</root>
-	
+
 Tip: If you want your XML **indented** use `new XMLWriter(true)`.
-	
+
 ## Chaining
 ```javascript
 	var XMLWriter = require('xml-writer');
@@ -50,10 +51,10 @@ Tip: If you want your XML **indented** use `new XMLWriter(true)`.
 	console.log(xw.toString());
 ```
 Output:
-	
+
 	<?xml version="1.0"?>
 	<root foo="value"><tag>Some content</tag></root>
-	
+
 ## Tolerant
 ```javascript
 	var XMLWriter = require('xml-writer');
@@ -63,9 +64,9 @@ Output:
 	console.log(xw.toString());
 ```
 Output:
-	
+
 	<root foo="value">Some content</root>
-	
+
 
 ## Extensible
 ```javascript
@@ -75,7 +76,7 @@ Output:
 	ws.on('close', function() {
 			console.log(fs.readFileSync('/tmp/foo.xml', 'UTF-8'));
 	});
-	xw = new XMLWriter(false, function(string, encoding) { 
+	xw = new XMLWriter(false, function(string, encoding) {
 			ws.write(string, encoding);
 	});
 	xw.startDocument('1.0', 'UTF-8').startElement(function() {
@@ -87,11 +88,11 @@ Output:
 ```
 
 Output:
-	
+
 	<?xml version="1.0" encoding="UTF-8"?>
 	<root>Some content</root>
-	
-	
+
+
 # Tests
 
 Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
@@ -109,11 +110,11 @@ Create an new writer
 ### text(String content)
 Write text
 
-### writeRaw 
+### writeRaw
 Write a raw XML text
 
 ## Document
-### startDocument(String version = '1.0', String encoding = NULL, Boolean standalone = false) 
+### startDocument(String version = '1.0', String encoding = NULL, Boolean standalone = false)
 Create document tag
 
 ### endDocument()
@@ -166,14 +167,14 @@ End current PI
 
 ## DocType
 
-### writeDocType(String name, String pubid, String sysid, String subset) 
-Write a DocType 
+### writeDocType(String name, String pubid, String sysid, String subset)
+Write a DocType
 
 ### startDocType(String name, String pubid, String sysid, String subset)
 Create start DocType tag
 
 ### endDocType()
-End current DocType 
+End current DocType
 
 ## CData
 
