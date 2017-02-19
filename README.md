@@ -40,7 +40,7 @@ Output:
 	<?xml version="1.0"?>
 	<root foo="value">Some content</root>
 
-Tip: If you want your XML **indented** use `new XMLWriter(true)`.
+Tip: If you want your XML **indented** use `new XMLWriter(true)` or `new XMLWriter('\t')`, for instance, if you want to use a custom string for indentation.
 
 ## Chaining
 ```javascript
@@ -104,7 +104,7 @@ Use [nodeunit](https://github.com/caolan/nodeunit) to run the tests.
 
 ## Generic
 
-### constructor XMLWriter(Boolean indent, Function writer(string, encoding))
+### constructor XMLWriter(Boolean|String indent, Function writer(string, encoding))
 Create an new writer
 
 ### text(String content)
