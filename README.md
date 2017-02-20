@@ -13,6 +13,7 @@ XML is still valid.
   * [Chip Lee](https://github.com/chipincode)
   * [Peecky](https://github.com/peecky)
   * [Julian Scheid](https://github.com/jscheid)
+  * [Guillaume Plique](https://github.com/Yomguithereal)
 
 # Installation
 
