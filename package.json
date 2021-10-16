@@ -1,5 +1,5 @@
 {
-  "name": "xml-writer",
+  "name": "xml-writer2",
   "version": "1.7.0",
   "types": "index.d.ts",
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
@@ -18,6 +18,10 @@
     {
       "name": "Julian Scheid",
       "url": "https://github.com/jscheid"
+    },
+    {
+      "name": "Matias Capuano",
+      "email": "maticapuano97@gmail.com"
     }
   ],
   "description": "Native and full Javascript implementation of the classic XMLWriter class",
@@ -27,7 +31,7 @@
     "XMLWriter",
     "generator"
   ],
-  "homepage": "http://github.com/touv/node-xml-writer",
+  "homepage": "http://github.com/touv/node-xml-writer2",
   "scripts": {
     "truc": "nodeunit test/",
     "test": "./node_modules/.bin/istanbul test ./node_modules/.bin/nodeunit test/"
@@ -35,7 +39,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/touv/node-xml-writer.git"
+    "url": "https://github.com/touv/node-xml-writer2.git"
   },
   "dependencies": {},
   "devDependencies": {

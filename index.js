@@ -1,1 +1,1 @@
-module.exports = require('./lib/xml-writer.js');
+module.exports = require("./lib/xml-writer.js");

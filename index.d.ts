@@ -1,4 +1,4 @@
-declare module "xml-writer" {
+declare module "xml-writer2" {
   type PrimitiveType = string | number | boolean;
 
   export default class XMLWriter {
