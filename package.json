@@ -1,6 +1,7 @@
 {
   "name": "xml-writer",
   "version": "1.7.0",
+  "types": "index.d.ts",
   "author": "Nicolas Thouvenin <nthouvenin@gmail.com>",
   "contributors": [
     {
